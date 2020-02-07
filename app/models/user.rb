@@ -1,7 +1,6 @@
 class User < ApplicationRecord
     validates :name, presence: true
-    validates :email, presence: true 
-    # I want email to be present as well as unique - how to write
+    validates :email, presence: true, uniqueness: { case_sensitive: false }
 
     has_secure_password
 
