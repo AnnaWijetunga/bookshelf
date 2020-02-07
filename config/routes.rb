@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :books
 
   get '/auth/:provider/callback' => 'sessions#omniauth'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # get 'auth/:provider/callback', to: 'sessions#create'
 end
