@@ -7,6 +7,16 @@ class User < ApplicationRecord
     has_many :reviews
     has_many :books, through: :reviews
 
-    # eventually will need google authentication model here
-
+    # google authentication model
+    def self.create_by_google(auth)
+        user = self.find_or_create_by(name: auth.info.name, email: auth.info.email)
+        if user.save
+          user
+        else
+          user.password = auth.info.email
+          user.password_confirmation = auth.info.email
+          user.save
+          user
+        end
+    end
 end
