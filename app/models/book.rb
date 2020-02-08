@@ -6,7 +6,7 @@ class Book < ApplicationRecord
     has_many :reviews
     has_many :users, through: :reviews
 
-    # accepts_nested_attributes_for :reviews -- I think I'll need this
+    accepts_nested_attributes_for :reviews
 
     # will eventually include scope here, maybe by title and author
 end
