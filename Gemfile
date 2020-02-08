@@ -26,6 +26,9 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails'
 
+gem 'faker'
+gem 'faker-bot'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
