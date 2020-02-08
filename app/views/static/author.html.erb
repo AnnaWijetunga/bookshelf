@@ -1,0 +1,11 @@
+<% provide(:title, "Books by Author") %>
+
+<h1>Books by Author</h1>
+
+
+<% @books.each do |b| %>
+<ul>
+  <li><%= link_to b.title, book_path(b) %> By: <%= b.author_first %> <%= b.author_last %></li>
+</ul>
+
+<% end %>
