@@ -36,6 +36,11 @@ end
 # Pre faker gem:
 
 User.create(name: "Banana Gal", email: "banana@email.com", password: "goat", password_confirmation: "goat")
+
 Genre.create(name: "Non-Fiction")
+
 Book.create(title: "Dear Mother" , author_first: "Bunmi", author_last: "Laditan" , genre_id: 1)
+Book.create(title: "Moby Dick" , author_first: "Herman", author_last: "Melville" , genre_id: 2)
+
 Review.create(content: "This is the review #1 in the seed file! This book will bring you to tears of joy and laughter." , book_id: 1, user_id: 1)
+Review.create(content: "If you have a year to spare, this is perfect novel for you." , book_id: 3, user_id: 2)
