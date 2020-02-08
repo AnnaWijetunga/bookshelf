@@ -1,1 +1,14 @@
-<h1>Welcome to Your Bookshelf!</h1>
+<% provide(:title, "Homepage") %>
+
+<div class="center jumbotron">
+
+<% if !logged_in? %>
+<h1>Bookshelf</h1>
+  <p>Welcome to the homepage for the <a href="/" target="_blank">Bookshelf</a></p>
+
+<%= link_to("Sign up", signup_path) %>
+
+<% else %>
+<h1>Bookshelf</h1>
+<% end %>
+</div>
