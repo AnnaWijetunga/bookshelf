@@ -1,36 +1,36 @@
-# require 'faker'
-# include Faker
+require 'faker'
+include Faker
 
-# 30.times do
-#     User.create(
-#         name: Faker::Name.name,
-#         email: Faker::Internet.email,
-#         password: Faker::Internet.password
-#     )
-# end
+30.times do
+    User.create(
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
+        password: Faker::Internet.password
+    )
+end
 
-# 30.times do
-#     Genre.create(
-#         name: Faker::Book.genre
-#     )
-# end
+30.times do
+    Genre.create(
+        name: Faker::Book.genre
+    )
+end
 
-# 30.times do
-#     Review.create(
-#         content: Faker::Restaurant.review,
-#         book_id: Faker::Number.within(range: 1..30),
-#         user_id: Faker::Number.within(range: 1..30)
-#     )
-# end
+30.times do
+    Review.create(
+        content: Faker::Restaurant.review,
+        book_id: Faker::Number.within(range: 1..30),
+        user_id: Faker::Number.within(range: 1..30)
+    )
+end
 
-# 30.times do
-#     Book.create(
-#         title: Faker::Book.title,
-#         author_first: Faker::Name.first_name,
-#         author_last: Faker::Name.last_name,
-#         genre_id: Faker::Number.within(range: 1..30)
-#     )
-# end
+30.times do
+    Book.create(
+        title: Faker::Book.title,
+        author_first: Faker::Name.first_name,
+        author_last: Faker::Name.last_name,
+        genre_id: Faker::Number.within(range: 1..30)
+    )
+end
 
 
 # Pre faker gem:
