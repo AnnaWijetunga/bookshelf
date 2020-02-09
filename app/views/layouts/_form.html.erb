@@ -1,0 +1,11 @@
+<%= form_for @review do |f| %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content, class: 'form-control' %>
+
+  <%= f.label :book %>
+  <%= f.collection_select(:book_id, Book.all, :id, :title) %>
+
+  <%= f.submit "Submit Review" %>
+
+<% end %>
