@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <% render 'layouts/header' %>
+
+
     <%= yield %>
+
+    <% if logged_in? %>
+
+    <% end %>
+    <%= render 'layouts/footer' %>
+    
+
+
   </body>
 </html>
