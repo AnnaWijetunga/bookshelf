@@ -1,0 +1,10 @@
+<% provide(:title, @user.name) %>
+
+<h3><%= @user.name %>'s Reviews</h3>
+
+<% @user.reviews.each do |r| %>
+<ul>
+  <%= link_to r.book.title, review_path(r) %>
+</ul>
+
+<% end %>
