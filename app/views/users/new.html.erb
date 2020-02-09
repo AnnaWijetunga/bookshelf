@@ -1,0 +1,33 @@
+<%= provide(:title, "Sign up") %>
+
+<h1>Sign Up</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @user do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <br>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <br>
+
+      <%= f.label :password_confirmation, "Password Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+      <br>
+      <br>
+
+      <%= f.submit "Create my account" %>
+      <br>
+      <br>
+
+      <a href="/auth/google_oauth2">Sign up with Google+</a>
+    <% end %>
+    <br>
+  </div>
+</div>
