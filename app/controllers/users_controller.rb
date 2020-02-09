@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
     def index
-        # working on it
+        # not sure yet
     end
     
     def show
