@@ -2,7 +2,7 @@ class BooksController < ApplicationController
     def index
         if params[:user_id]
             @books = User.find(params[:user_id]).books
-            # Error message: "Time to add a new book!" if @books.empty?
+            flash.now[:danger] = "No books yet." if @books.empty?
         end
     end
 
