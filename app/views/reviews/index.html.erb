@@ -1,0 +1,15 @@
+<%= provide(:title, "All Reviews") %>
+
+<h1>All Reviews</h1>
+
+<% @reviews.each do |review| %>
+  <div class="row">
+    <div class="col-md-8 well">
+      <h4>Review of: <%= link_to review.book.title, review_path(review) %></h4>
+      <h5>By: <%= link_to review.user.name, '#' %></h5>
+      <p><span class="quiet"><small>Created <%= time_ago_in_words(review.created_at)%>
+        ago</small></span></p>
+    </div>
+  </div>
+<% end %>
+<br>
