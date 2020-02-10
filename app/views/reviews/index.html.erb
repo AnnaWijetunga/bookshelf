@@ -4,6 +4,11 @@
 
 <% @reviews.each do |review| %>
   <div class="row">
+    <div class="col-md-2">
+      <section class="center">
+
+      </section>
+    </div>
     <div class="col-md-8 well">
       <h4>Review of: <%= link_to review.book.title, review_path(review) %></h4>
       <h5>By: <%= link_to review.user.name, '#' %></h5>
