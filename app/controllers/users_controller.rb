@@ -19,7 +19,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
           log_in @user
-          # Welcome message: "Welcome to Bookshelf!"
+          flash[:success] = "Welcome to Bookshelf!"
           redirect_to @user
         else
           render :new

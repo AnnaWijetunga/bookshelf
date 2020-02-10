@@ -36,7 +36,7 @@ class ReviewsController < ApplicationController
 
     def destroy
         @review.destroy
-        # Message: "Review has been deleted."
+        flash[:danger] = "This review has been permanently deleted."
         redirect_to user_path(currrent_user.id)
     end
 
@@ -52,7 +52,7 @@ class ReviewsController < ApplicationController
 
     def update_review
       unless logged_in? && current_user[:id] == @review.user_id
-        # error message = "So sorry, you cannot edit this review"
+        flash[:danger] =  "So sorry, you are not allowed to edit this review."
         redirect_to user_path
       end
     end

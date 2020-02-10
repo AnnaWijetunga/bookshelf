@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
     def destroy
         log_out
-        # goodbye message: "Bye for now, and happy reading!"
+        flash[:danger] = "Bye for now, and happy reading!"
         redirect_to root_path
     end
 
