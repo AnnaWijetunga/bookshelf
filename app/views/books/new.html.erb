@@ -1,0 +1,42 @@
+<%= provide(:title, "New Book") %>
+
+<h1>New Book</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @book do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br>
+    <br>
+
+    <%= f.label :author_first %>
+    <%= f.text_field :author_first %>
+    <br>
+    <br>
+
+    <%= f.label :author_last %>
+    <%= f.text_field :author_last %>
+    <br>
+    <br>
+
+    <%= f.label :genre %>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name) %>
+    <br>
+    <br>
+
+    <%= f.fields_for :reviews do |rf| %>
+    <%= rf.label :review %>
+    <%= rf.text_area :content %>
+    <% end %>
+    <br>
+    <br>
+
+    <%= f.submit "Create Book" %>
+
+    <% end %>
+    <br>
+    <br>
+    
+  </div>
+</div>
