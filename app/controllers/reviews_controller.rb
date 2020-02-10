@@ -52,7 +52,7 @@ class ReviewsController < ApplicationController
 
     def update_review
       unless logged_in? && current_user[:id] == @review.user_id
-        flash[:danger] = "You cannot edit this review"
+        # error message = "So sorry, you cannot edit this review"
         redirect_to user_path
       end
     end
