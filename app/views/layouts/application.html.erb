@@ -11,16 +11,15 @@
 
   <body>
     <%= render 'layouts/header' %>
-
-
-    <%= yield %>
-
-    <% if logged_in? %>
-       <%= render 'layouts/shared/links' %>
-    <% end %>
-    <%= render 'layouts/footer' %>
+    <div class="container">
+      <%= render 'layouts/shared/flash' %>
     
+      <%= yield %>
 
-
+      <% if logged_in? %>
+         <%= render 'layouts/shared/links' %>
+      <% end %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
