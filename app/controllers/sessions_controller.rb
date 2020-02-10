@@ -7,17 +7,17 @@ class SessionsController < ApplicationController
 
     def create
         if params[:session]
-            user = User.find_by(email: params[:session][:email])
-            valid_regular_user(user)
+          user = User.find_by(email: params[:session][:email])
+          valid_regular_user(user)
         else
-            user = User.create_by_google(auth)
-            valid_google_user(user)
+          user = User.create_by_google(auth)
+          valid_google_user(user)
         end
     end
 
     def destroy
         log_out
-        # goodbye message
+        # goodbye message: "Bye for now, and happy reading!"
         redirect_to root_path
     end
 
