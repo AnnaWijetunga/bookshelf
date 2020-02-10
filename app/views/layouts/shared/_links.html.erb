@@ -1,6 +1,6 @@
-<h3><%= current_user.name%></h3>
+<br>
 
-<%= link_to "Your Book List", user_books_path(current_user.id) %>
-<%= link_to "Add New Book", new_book_path %>
-<%= link_to "Reviews", reviews_path %>
-<%= link_to "Add New Review", new_user_review_path(current_user.id) %>
+<h2><%= link_to "Your Book List", user_books_path(current_user.id), class: "btn btn-sm btn-primary" %>
+<%= link_to "Add New Book", new_book_path, class: "btn btn-sm btn-primary" %>
+<%= link_to "Reviews", reviews_path, class: "btn btn-sm btn-primary" %>
+<%= link_to "Add New Review", new_user_review_path(current_user.id), class: "btn btn-sm btn-primary" %></h2>
