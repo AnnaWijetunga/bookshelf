@@ -8,5 +8,7 @@ class Book < ApplicationRecord
 
     accepts_nested_attributes_for :reviews
 
-    # will eventually include scope here, maybe by title and author
+    scope :order_by_title, -> {order("title")}
+    scope :order_by_author, -> {order("author_last")}
+
 end
