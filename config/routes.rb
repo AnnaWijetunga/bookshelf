@@ -19,7 +19,10 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :show]
   end
 
-  get '/auth/:provider/callback', to: 'sessions#omniauth'
-  # get 'auth/:provider/callback', to: 'sessions#create'
-  # need to work on this - where folks are directed post google login
+  # From our lectures:
+  # get '/auth/:provider/callback', to: 'sessions#omniauth'
+
+  # Trying to fix it!
+  get '/auth/:provider/callback', to: 'sessions#create'
+
 end
