@@ -16,7 +16,7 @@
     <%= yield %>
 
     <% if logged_in? %>
-
+       <%= render 'layouts/shared/links' %>
     <% end %>
     <%= render 'layouts/footer' %>
     
