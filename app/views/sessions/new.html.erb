@@ -11,11 +11,20 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.submit "Log in" %>
+      <%= f.submit "Log in", class: "btn btn-success" %>
 
     <% end %>
+
     <br>
-<a href="/auth/google_oauth2" class="btn btn-danger">Log in with Google+</a>
-    <p>New user? <%= link_to "Sign up now!", signup_path  %></p>
+    <br>
+    
+    <h1>Google Login</h1>
+    <h2><a href="/auth/google_oauth2" class="btn btn-primary" >Log in with Google</a></h2>
+    
+    <br>
+    <br>
+
+    <p>If you don't have an account, <%= link_to "sign up here.", signup_path  %><p>
+
   </div>
 </div>
