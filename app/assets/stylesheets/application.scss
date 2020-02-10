@@ -17,7 +17,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- /* all */
+ /* All */
 
  body {
     padding-top: 60px;
@@ -39,7 +39,7 @@
     margin-bottom: 10px;
   }
 
-  /* typography */
+  /* Font */
   
   h1, h2, h3, h4, h5, h6 {
     line-height: 1;
@@ -54,7 +54,7 @@
   
   h2 {
     font-size: 1.2em;
-    letter-spacing: -1px;
+    /*letter-spacing: -1px;*/
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
@@ -66,15 +66,13 @@
     line-height: 1.7em;
   }
 
-  /* header */
+  /* Header */
   
   #logo {
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+    color: rgb(214, 9, 129);
     padding-top: 9px;
     font-weight: bold;
   }
@@ -84,17 +82,19 @@
     text-decoration: none;
   }
 
-  /* footer */
+  /* Footer */
   
   footer {
     margin-top: 45px;
     padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-top: 1px solid #eaeaea;
     color: #777;
   }
   
   footer a {
-    color: #555;
+    color: rgb(3, 3, 3);
   }
   
   footer a:hover {
@@ -114,7 +114,7 @@
     float: left;
     margin-left: 15px;
   }
-  /* mixins, variables, etc. */
+  /* Mixins, variables */
   
   $gray-medium-light: #eaeaea;
   
@@ -132,7 +132,7 @@
     @include box_sizing;
   }
   
-  /* forms */
+  /* Forms */
   
   input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
