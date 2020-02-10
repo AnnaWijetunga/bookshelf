@@ -21,4 +21,5 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#omniauth'
   # get 'auth/:provider/callback', to: 'sessions#create'
+  # need to work on this - where folks are directed post google login
 end
