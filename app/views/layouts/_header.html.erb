@@ -4,8 +4,7 @@
    <nav>
       <ul class="nav navbar-nav navbar-right">
 
-        <li><%= link_to "Books by Author", books_by_author_path %></li>
-        <li><%= link_to "Books by Title", books_by_title_path %></li>
+
 
         <% if logged_in? %>
         <li><%= link_to "Home", user_path(current_user.id)%></li>
@@ -15,6 +14,9 @@
         <li><%= link_to "Log in", login_path %></li>
         <li><%= link_to "Sign up", signup_path %></li>
         <% end %>
+
+        <li><%= link_to "Books by Author", books_by_author_path %></li>
+        <li><%= link_to "Books by Title", books_by_title_path %></li>
 
       </ul>
     </nav>
