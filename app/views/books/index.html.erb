@@ -1,0 +1,17 @@
+<%= provide(:title, "#{current_user.name}'s Books") %>
+
+<h1><%= current_user.name %>'s Books</h1>
+<% @books.each do |x| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="center">
+      </section>
+    </div>
+    <div class="col-md-8 well">
+      <h4><%=link_to x.title, book_path(x) %> By: <%= x.author_first %> <%= x.author_last %></h4>
+
+      <p><span class="quiet"><small>Created <%= time_ago_in_words(x.created_at)%>
+        ago</small></span></p>
+    </div>
+  </div>
+<% end %>
