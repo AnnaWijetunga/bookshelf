@@ -56,7 +56,9 @@ Yes - in routes.rb, here you'll find the nested resources for books and reviews 
     resources :books, only: [:index]
     resources :reviews, only: [:new, :create, :show]
   end
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+
+- [x] Include form display of validation errors (form URL e.g. /recipes/new)
+Yes - there are validation errors for sign up and login, as well as errors when a user tried to access a book list when they have added no books.
 
 Confirm:
 - [x] The application is pretty DRY
