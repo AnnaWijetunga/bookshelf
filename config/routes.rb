@@ -19,7 +19,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :show]
   end
 
-  # Trying to fix it!
   get '/auth/:provider/callback', to: 'sessions#create'
 
 end
