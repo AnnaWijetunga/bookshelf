@@ -4,8 +4,11 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-  <%= render 'layouts/shared/error_messages', holder: @review %>
-  <%= render 'layouts/form' %>
-<%= link_to "Delete Review", review_path, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %>
+
+    <%= render 'layouts/shared/errors', holder: @review %>
+    
+    <%= render 'layouts/form' %>
+
+    <h2><%= link_to "Delete Review", review_path, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-danger" %></h2>
   </div>
 </div>
