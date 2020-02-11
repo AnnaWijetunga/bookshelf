@@ -19,10 +19,10 @@ module SessionsHelper
     def valid_regular_user(user)
         if user && user.authenticate(params[:session][:password])
           log_in user
-          # Welcome message: "Glad you're here, #{user.name.capitalize}"
+          flash[:success] = "Glad you're here, #{user.name.capitalize}!"
           redirect_to user
         else
-          # Error message: "Invalid email/password combination."
+          flash.now[:danger] = "Invalid email or password."
           render :new
         end
     end
@@ -30,10 +30,10 @@ module SessionsHelper
     def valid_google_user(user)
         if user && user.authenticate(user.password)
           log_in(user)
-          # Welcome message: "Glad you're here, #{user.name.capitalize}"
+          flash[:success] = "Glad you're here, #{user.name.capitalize}!"
           redirect_to user
         else
-          # Error message: "Invalid email/password combination."
+          flash.now[:danger] = "Invalid email or password."
           render :new
         end
     end
