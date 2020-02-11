@@ -44,3 +44,15 @@
 
 # Review.create(content: "This is the review #1 in the seed file! This book will bring you to tears of joy and laughter." , book_id: 1, user_id: 1)
 # Review.create(content: "If you have a year to spare, this is perfect novel for you." , book_id: 3, user_id: 2)
+
+Genre.create(name: "Autobiography")
+Genre.create(name: "Children")
+Genre.create(name: "Fantasy")
+Genre.create(name: "Fiction")
+Genre.create(name: "History")
+Genre.create(name: "Non-Fiction")
+Genre.create(name: "Philosophy")
+Genre.create(name: "Programming")
+Genre.create(name: "Reference")
+Genre.create(name: "Sci-fi")
+Genre.create(name: "Young Adult")
