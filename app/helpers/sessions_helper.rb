@@ -28,13 +28,8 @@ module SessionsHelper
     end
 
     def valid_google_user(user)
-        if user && user.authenticate(user.password)
-          log_in(user)
-          flash[:success] = "Glad you're here, #{user.name.capitalize}!"
-          redirect_to user
-        else
-          flash.now[:danger] = "Invalid email or password."
-          render :new
-        end
+        log_in(user)
+        flash[:success] = "Glad you're here, #{user.name.capitalize}!"
+        redirect_to user
     end
 end
