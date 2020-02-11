@@ -6,6 +6,6 @@
   <%= f.label :book %>
   <%= f.collection_select(:book_id, Book.all, :id, :title) %>
 
-  <%= f.submit "Submit Review" %>
+  <%= f.submit "Submit Review", class: "btn btn-success" %>
 
 <% end %>
