@@ -37,7 +37,7 @@ class ReviewsController < ApplicationController
     def destroy
         @review.destroy
         flash[:danger] = "This review has been permanently deleted."
-        redirect_to user_path(currrent_user.id)
+        redirect_to user_path(current_user.id)
     end
 
     private
@@ -47,7 +47,7 @@ class ReviewsController < ApplicationController
     end
 
     def find_review
-      @review = Review.find(params[:id])
+        @review = Review.find(params[:id])
     end
 
     def update_review
