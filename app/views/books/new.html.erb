@@ -8,21 +8,17 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
     <br>
-    <br>
 
     <%= f.label :author_first %>
     <%= f.text_field :author_first %>
-    <br>
     <br>
 
     <%= f.label :author_last %>
     <%= f.text_field :author_last %>
     <br>
-    <br>
 
     <%= f.label :genre %>
     <%= f.collection_select(:genre_id, Genre.all, :id, :name) %>
-    <br>
     <br>
 
     <%= f.fields_for :reviews do |rf| %>
@@ -30,9 +26,8 @@
     <%= rf.text_area :content %>
     <% end %>
     <br>
-    <br>
 
-    <%= f.submit "Create Book", class: "btn btn-primary" %>
+    <%= f.submit "Create Book", class: "btn btn-success" %>
 
     <% end %>
     <br>
