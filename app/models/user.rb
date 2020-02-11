@@ -9,8 +9,12 @@ class User < ApplicationRecord
 
     # google authentication method
     def self.create_by_google(auth)
+      #finding by their UID 
+      #the UID is the specific ID we receive from the provider
+      #we don't know the password 
+      #SecureHex.new
         user = self.find_or_create_by(name: auth.info.name, email: auth.info.email)
-        if user.save
+        if user.id
           user
         else
           user.password = auth.info.email
