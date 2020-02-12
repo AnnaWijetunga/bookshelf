@@ -19,7 +19,7 @@ module SessionsHelper
     def valid_regular_user(user)
         if user && user.authenticate(params[:session][:password])
           log_in user
-          flash[:success] = "Glad you're here, #{user.name.capitalize}!"
+          flash[:success] = "Glad you're here!"
           redirect_to user
         else
           flash.now[:danger] = "Invalid email or password."
@@ -29,7 +29,7 @@ module SessionsHelper
 
     def valid_google_user(user)
         log_in(user)
-        flash[:success] = "Glad you're here, #{user.name.capitalize}!"
+        flash[:success] = "Glad you're here!"
         redirect_to user
     end
 end
