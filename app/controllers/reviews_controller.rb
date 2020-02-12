@@ -1,5 +1,10 @@
 class ReviewsController < ApplicationController
+    # methods run before a controller action
+    # before halts the request cycle
+    # find_review is a method which will always call before show, edit, update, destroy
     before_action :find_review, only: [:show, :edit, :update, :destroy]
+
+    # update_review is a method which will always call before show, edit, update, destroy
     before_action :update_review, only: [:edit]
 
     def index
