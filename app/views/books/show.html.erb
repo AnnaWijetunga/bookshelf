@@ -14,9 +14,9 @@
 
 <% @book.reviews.each do |br| %>
 
-<ul>
-  <li><%= link_to br.user.name, review_path(br) %></li>
-</ul>
+  <ul>
+    <li><%= link_to br.user.name, review_path(br) %></li>
+  </ul>
 
 <% end %>
 
