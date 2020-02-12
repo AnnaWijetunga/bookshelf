@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  # custom routes
   root 'static#home'
 
   get 'books/by_author', to: 'static#author'
@@ -10,15 +11,18 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
+  # all 7 restful routes
   resources :genres
   resources :reviews
   resources :books, only: [:new, :create, :show]
 
+  # nested routes
   resources :users do
     resources :books, only: [:index]
     resources :reviews, only: [:new, :create, :show]
   end
 
+  # omniauth route
   get '/auth/:provider/callback', to: 'sessions#create'
 
 end
