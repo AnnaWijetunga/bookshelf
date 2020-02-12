@@ -17,6 +17,9 @@ class BooksController < ApplicationController
         if @book.save
           redirect_to @book
         else
+          # If the book is invalid, hold on to @book, because it is now full of
+          # useful error messages, and re-render the :new page, which knows how
+          # to display them alongside the user's entries.
           render :new
         end
     end
@@ -27,6 +30,8 @@ class BooksController < ApplicationController
 
     private
 
+    # tells Rails which parameters are allowed to be submitted
+    # through the form to the database
     def book_params
         params.require(:book).permit(:title, :author_first, :author_last, :genre_id, reviews_attributes: [:content])
     end

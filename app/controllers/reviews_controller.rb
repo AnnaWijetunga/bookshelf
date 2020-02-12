@@ -22,6 +22,9 @@ class ReviewsController < ApplicationController
         if @review.save
             redirect_to @review
         else
+            # If the review is invalid, hold on to @review, because it is now full of
+            # useful error messages, and re-render the :new page, which knows how
+            # to display them alongside the user's entries.
             render :new 
         end
     end
@@ -42,6 +45,8 @@ class ReviewsController < ApplicationController
 
     private
     
+    # tells Rails which parameters are allowed to be submitted
+    # through the form to the database
     def review_params
       params.require(:review).permit(:content, :book_id)
     end

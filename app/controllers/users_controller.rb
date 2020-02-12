@@ -32,6 +32,8 @@ class UsersController < ApplicationController
     def destroy
     end
 
+    # tells Rails which parameters are allowed to be submitted
+    # through the form to the database
     private
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
