@@ -1,5 +1,8 @@
 class User < ApplicationRecord
+  # user must have a name
     validates :name, presence: true
+
+    # user must have an email, and it must be unique
     validates :email, presence: true, uniqueness: { case_sensitive: false }
 
     has_secure_password
@@ -9,10 +12,6 @@ class User < ApplicationRecord
 
     # google authentication method
     def self.create_by_google(auth)
-      #finding by their UID 
-      #the UID is the specific ID we receive from the provider
-      #we don't know the password 
-      #SecureHex.new
         user = self.find_or_create_by(name: auth.info.name, email: auth.info.email)
         if user.id
           user
@@ -23,4 +22,14 @@ class User < ApplicationRecord
           user
         end
     end
+
+    # alternate
+
+    # def self.create_by_google(auth)
+    #   @user = User.find_or_create_by(uid: auth[:uid]) do |u|
+    #     u.name = auth[:info][:email]
+    #     u.email = auth[:info][:email]
+    #     u.password = SecureRandom.hex
+    #   end
+    # end
 end
