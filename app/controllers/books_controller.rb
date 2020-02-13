@@ -1,5 +1,10 @@
 class BooksController < ApplicationController
     def index
+        # to account for our nested route (books nested under users)
+        # added a conditional to account for whether the user is trying 
+        # to access the index of all books or the index of all books 
+        # by a certain user
+        # checking for a user id to help us determine where to send the user
         if params[:user_id]
             @books = User.find(params[:user_id]).books
             flash.now[:danger] = "Add a new book to get started!" if @books.empty?
