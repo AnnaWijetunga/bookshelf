@@ -12,7 +12,8 @@ class Book < ApplicationRecord
     # allows nested form for reviews
     accepts_nested_attributes_for :reviews
 
-    # 
+    # SQL statements to order books by title and author
+    # StaticController contains the methods
     scope :order_by_title, -> {order("title")}
     scope :order_by_author, -> {order("author_last")}
 
