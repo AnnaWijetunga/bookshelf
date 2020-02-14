@@ -1,6 +1,19 @@
 <%= provide(:title, "All Reviews") %>
 
+<% if !params[:book].blank? %>
+  <% @reviews = Review.where(book: params[:book]) %>
+<% end %>
+
 <h1>All Reviews</h1>
+
+<div>
+  <h2>Search Reviews</h2>
+  <%= form_tag("/reviews", method: "get") do %>
+    <%= select_tag "book", options_from_collection_for_select(Book.all, "id", "title"), include_blank: true %>
+    <%= submit_tag "Search" %>
+  <% end %>
+</div>
+<br>
 
 <% @reviews.each do |review| %>
   <div class="row">
