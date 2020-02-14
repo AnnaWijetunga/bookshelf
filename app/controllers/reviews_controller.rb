@@ -7,6 +7,9 @@ class ReviewsController < ApplicationController
     # update_review is a method which will always call before show, edit, update, destroy
     before_action :update_review, only: [:edit]
 
+    # to help with search params
+    helper_method :params
+
     def index
         @reviews = Review.all
     end
