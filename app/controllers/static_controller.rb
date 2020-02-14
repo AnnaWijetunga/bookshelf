@@ -2,7 +2,7 @@ class StaticController < ApplicationController
     def home
     end
 
-    # SQL statment - order_by
+    # SQL statement - order_by
     def title
         @books = Book.order_by_title
     end

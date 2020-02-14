@@ -14,7 +14,7 @@ class User < ApplicationRecord
     has_many :reviews
     has_many :books, through: :reviews
 
-    # #google authentication method
+    # google authentication method
     def self.create_by_google(auth)
         user = self.find_or_create_by(name: auth.info.name, email: auth.info.email)
         if user.id

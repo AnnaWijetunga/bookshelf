@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # all 7 restful routes
   resources :genres
   resources :reviews
+  
   resources :books, only: [:new, :create, :show]
 
   # nested routes
