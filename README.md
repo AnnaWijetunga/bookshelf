@@ -6,7 +6,7 @@ This is a fully functional MVC and CRUD application built using Ruby on Rails.
 
 Bokoshelf is a place to track all books a user had read, as well as leave a review about each book. Users can see and access other people's reviews.
 
-## Bookshelf Video Walkthrough
+## Video Walkthrough
 
 Click here for a 1-minute video walkthrough: https://vimeo.com/390829692
 
