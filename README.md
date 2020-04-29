@@ -4,7 +4,7 @@ This is a fully functional MVC and CRUD application built using Ruby on Rails.
 
 ## Overview
 
-Bokoshelf is a place to track all books a user had read, as well as leave a review about each book. Users can see and access other people's reviews.
+Bookshelf is a place to track all books a user has read, as well as leave a review about each book. Users can see and access other people's reviews.
 
 ## Video Walkthrough
 
