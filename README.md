@@ -4,7 +4,7 @@ Welcome to Bookshelf! This is a fully functional MVC and CRUD application built 
 
 To see Bookshelf live, you're welcome to click below:
 
-https://penny-patrol.herokuapp.com/
+https://the-bookshelf-app.herokuapp.com/
 
 ## Overview
 
