@@ -1,6 +1,10 @@
 # Bookshelf
 
-This is a fully functional MVC and CRUD application built using Ruby on Rails.
+Welcome to Bookshelf! This is a fully functional MVC and CRUD application built using Ruby on Rails.
+
+To see Bookshelf live, you're welcome to click below:
+
+https://penny-patrol.herokuapp.com/
 
 ## Overview
 
