@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+    # experimenting with before filter to allow access to Heroku/OAuth
+    skip_before_filter :protect_from_forgery
+    
     def index
     end
     
