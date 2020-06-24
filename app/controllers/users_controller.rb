@@ -3,7 +3,8 @@ class UsersController < ApplicationController
     # skip_before_filter :protect_from_forgery
 
     # experimenting
-    protect_from_forgery prepend: true
+    # protect_from_forgery prepend: true
+    skip_before_filter :verify_authenticity_token
 
     def index
     end
