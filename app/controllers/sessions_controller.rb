@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
     # experimenting with before filter to allow access to Heroku/OAuth
     skip_before_filter :protect_from_forgery
-    # skip_before_filter :verify_authenticity_token
-    # skip_before_action :verify_authenticity_token, except: [:create, :update, :destroy]
+
+    # experimenting
+    protect_from_forgery prepend: true
 
     # many methods moved to sessions_helper.rb to keep this clean
 
