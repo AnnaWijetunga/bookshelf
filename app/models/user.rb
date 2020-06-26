@@ -20,6 +20,7 @@ class User < ApplicationRecord
         if user.id
           user
         else
+          user.name = auth.info.name
           user.password = auth.info.email
           user.password_confirmation = auth.info.email
           user.save
