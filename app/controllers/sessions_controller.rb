@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
     # experimenting with before filter to allow access to Heroku/OAuth
-    skip_before_action :protect_from_forgery
+    skip_before_action :protect_from_forgery, raise: false
 
     # experimenting
     # protect_from_forgery prepend: true
