@@ -8,7 +8,7 @@ class User < ApplicationRecord
     # adds two fields to this model:
     # password and password_confirmation
     # corresponds to password_digest column in migration
-
+    # add_index :users, :email, unique: true 
     has_secure_password
 
     has_many :reviews
@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
     # google authentication method
     def self.create_by_google(auth)
-        user = self.find_or_create_by(name: auth.info.name, email: auth.info.email)
+        user = self.find_or_create_by(email: auth.info.email)
         if user.id
           user
         else
