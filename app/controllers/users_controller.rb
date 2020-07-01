@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
-    # experimenting with before filter to allow access to Heroku/OAuth
+    # use to allow access to Heroku/OAuth
     skip_before_action :protect_from_forgery, raise: false
-
-    # experimenting
-    # protect_from_forgery prepend: true
-    # skip_before_filter :verify_authenticity_token
 
     def index
     end
